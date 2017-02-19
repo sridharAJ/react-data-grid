@@ -4,8 +4,9 @@ React Data Grid
 - Configurable Columns, ie coulmns can be of any type (input/checkbox/text/date) etc
 - Pagination ie component should provide hooks to easily paginate and UI for pagination
 - Sorting, ability to do soritng on single/multiple columns
-- Abilitly to handle hundreds of thousands of rows without issue
+- Ablitity to handle hundreds of thousands of rows without issue
 - Infinite scroll
+- Column Resizing
 
 ## Examples:
 
