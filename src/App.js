@@ -18,8 +18,7 @@ class App extends Component {
                 currentPage: 1,
                 sortDirection: null,
                 sortColumn: null,
-                title: '',
-                resultsPerPage: 10000,
+                resultsPerPage: 100,
                 data: Data,
                 elementId: "testTable",
                 columnMetadata: [
@@ -72,7 +71,6 @@ class App extends Component {
         }
 
         this.onChangeGrid = this.onChangeGrid.bind(this);
-        this.onSort = this.onSort.bind(this);
     }
 
     onChangeGrid(event, data) {
@@ -84,37 +82,13 @@ class App extends Component {
         });
     }
 
-    onSort(a, b, sortColumn) {
-        const numberRegx = /^[-]*[0-9,/.]*$/;
-        const numA = typeof a == 'number' ? a : numberRegx.test(a) ? Number(a.replace(/,/g , '')) : a
-        const numB = typeof b == 'number' ? b : numberRegx.test(b) ? Number(b.replace(/,/g , '')) : b
-        if (!isNaN(numA) && !isNaN(numB)) {
-            if (sortColumn.direction === 'ASC') {
-                return numA - numB
-            } else {
-                return numB - numA
-            }
-        } else if (a && b) {
-            if (sortColumn.direction === 'ASC') {
-                return a.toString().localeCompare(b.toString())
-            }
-            else {
-                return b.toString().localeCompare(a.toString())
-            }
-        }
-        return 0;
-    }
-
     render() {
         return (
             <div className="App">
                 <div className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <h2>Welcome to React pp</h2>
+                    <h2>React Data Grid</h2>
                 </div>
-                <p className="App-intro">
-                To get started, edit <code>src/App.js</code> and save to reload.
-                </p>
                 <div style={{height: 300}}>
                     <DataGrid {...this.state.tableConfig} onChangeGrid={this.onChangeGrid} />
                 </div>
