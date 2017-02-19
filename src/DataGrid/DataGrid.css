@@ -1,0 +1,134 @@
+@import "~react-select/dist/react-select.min.css";
+.gridScroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex: 1;
+}
+
+.smartGrid{
+    margin: 0 0 0 0;
+}
+
+.defaultHeaderContainer {
+    border-bottom: 2px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+
+.defaultRow {
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    color: #666;
+    flex-basis: 100%;
+    /*overflow: hidden;*/
+    border-bottom: 1px solid #ddd;
+    /*border-top: 1px solid #ddd;*/
+}
+
+.defaultRow.header {
+    border-bottom: 2px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+
+.defaultCell {
+    padding: 8px 10px 8px 4px;
+    font-size:11px;
+    word-break: break-word;
+    flex-basis: 0;
+    flex-grow:1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #eee;
+}
+
+.defaultCell:last-child {
+    padding: 8px 15px 8px 8px;
+}
+
+.defaultCell:first-child {
+    padding: 8px 8px 8px 15px;
+}
+
+.header{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.rowContainer {
+    /*height: 100%;*/
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 10px;
+}
+
+.gridParent{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid.row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.table-header-line {
+    border-color: black;
+    height: 100%;
+    border-right-style: solid;
+    border-right-width: 1px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 10;
+}
+.table-header-border {
+    cursor: ew-resize;
+    position: absolute;
+    right: -5px;
+    width: 12px;
+}
+
+.table-header-resize {
+    position: absolute;
+    height: 100%;
+    cursor: ew-resize;
+    right: 0px;
+    width: 6px;
+}
+
+.defaultFooter {
+    position: relative;
+    font-size: 12px;
+    margin: 10px;
+}
+
+.defaultFooter .pagination {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+}
+
+.defaultFooter .pagination .Select-arrow-zone {
+    display: none;
+}
+
+.defaultFooter .pagination .btn {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.defaultFooter .pagination .previousButton {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.defaultFooter .pagination .nextButton {
+    margin-left: 5px;
+    cursor: pointer;
+}
